@@ -209,17 +209,17 @@ def negyzet_atloja(oldal):
     """ A függvény bemenetként megkapja a négyzet oldalának hosszát és 
         az átló hosszával tér vissza.
     """    
-    return oldal
+    return (oldal **2 + oldal**2 )** 0.5
     
 
-#assert round(negyzet_atloja(10),5) == round(14.142135623730951,5)
+assert round(negyzet_atloja(10),5) == round(14.142135623730951,5)
 #---------------------------------------------------------
 
 def teglalap_atloja(a, b):
     """ A függvény bemenetként megkapja az oldalak hosszát és 
         az átló hosszával tér vissza.
     """    
-    pass # Írd a kódodat a következő sorokba!
+    return (a ** 2 + b ** 2) ** 0.5
 
 
 #assert teglalap_atloja(3, 4) == 5.0
@@ -230,8 +230,9 @@ def abszolut(szam):
     """ A függvény a bemenő paraméterként kapott szám 
         abszolút értékével tér vissza.
     """    
-    
-
+    if szam <= 0:
+        return szam * -1
+    return szam * 1
 
 assert abszolut(-7) == 7
 assert abszolut( 0) == 0
